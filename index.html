@@ -1,0 +1,545 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kouru Rudra Teja — Software Engineer & ML Developer</title>
+  <meta name="description" content="Portfolio of Kouru Rudra Teja — Software Engineer & ML Developer building full-stack platforms and predictive systems. B.Tech AI & ML, Hyderabad." />
+  <meta name="keywords" content="Kouru Rudra Teja, Software Engineer, ML Developer, Python, React, Next.js, XGBoost, Full Stack" />
+  <meta property="og:title" content="Kouru Rudra Teja — Software Engineer & ML Developer" />
+  <meta property="og:description" content="Building full-stack platforms and predictive systems." />
+  <meta property="og:type" content="website" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- COMMAND PALETTE OVERLAY -->
+  <div id="cmd-overlay" class="cmd-overlay" aria-hidden="true" role="dialog" aria-label="Command Palette">
+    <div class="cmd-palette">
+      <div class="cmd-search-row">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="cmd-icon"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+        <input id="cmd-input" type="text" placeholder="Type a command or search..." autocomplete="off" spellcheck="false" />
+        <kbd class="cmd-esc">Esc</kbd>
+      </div>
+      <div class="cmd-divider"></div>
+      <ul class="cmd-list" id="cmd-list" role="listbox">
+        <li class="cmd-group-label">Navigation</li>
+        <li class="cmd-item" data-action="scroll" data-target="work" role="option" tabindex="0">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h6"/><path d="m21 3-9 9"/><path d="M15 3h6v6"/></svg>
+          <span>Go to Work Experience</span>
+          <kbd>Enter</kbd>
+        </li>
+        <li class="cmd-item" data-action="scroll" data-target="projects" role="option" tabindex="0">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/></svg>
+          <span>Go to Projects</span>
+          <kbd>Enter</kbd>
+        </li>
+        <li class="cmd-item" data-action="scroll" data-target="techstack" role="option" tabindex="0">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+          <span>Go to Tech Stack</span>
+          <kbd>Enter</kbd>
+        </li>
+        <li class="cmd-item" data-action="scroll" data-target="education" role="option" tabindex="0">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>
+          <span>Go to Education</span>
+          <kbd>Enter</kbd>
+        </li>
+        <li class="cmd-item" data-action="scroll" data-target="contact" role="option" tabindex="0">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          <span>Go to Contact</span>
+          <kbd>Enter</kbd>
+        </li>
+        <li class="cmd-group-label">Actions</li>
+        <li class="cmd-item" data-action="copy-email" role="option" tabindex="0">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+          <span>Copy Email Address</span>
+          <kbd>Enter</kbd>
+        </li>
+        <li class="cmd-item" data-action="github" role="option" tabindex="0">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0 1 12 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z"/></svg>
+          <span>Open GitHub Profile</span>
+          <kbd>Enter</kbd>
+        </li>
+        <li class="cmd-item" data-action="linkedin" role="option" tabindex="0">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+          <span>Open LinkedIn Profile</span>
+          <kbd>Enter</kbd>
+        </li>
+        <li class="cmd-item" data-action="theme" role="option" tabindex="0">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+          <span>Toggle Light / Dark Theme</span>
+          <kbd>Enter</kbd>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- TOAST NOTIFICATION -->
+  <div id="toast" class="toast" aria-live="polite" aria-atomic="true"></div>
+
+  <!-- PROJECT MODAL -->
+  <div id="project-modal" class="modal-overlay" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+    <div class="modal-panel">
+      <button class="modal-close" id="modal-close-btn" aria-label="Close modal">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+      </button>
+      <div id="modal-body"></div>
+    </div>
+  </div>
+
+  <!-- NAV -->
+  <header class="nav-bar" id="nav-bar">
+    <div class="nav-inner">
+      <div class="nav-left">
+        <a href="#" class="nav-name" aria-label="Home">Kouru Rudra Teja</a>
+        <span class="status-dot" aria-hidden="true"></span>
+        <span class="status-text">Available for SE &amp; ML Roles</span>
+      </div>
+      <nav class="nav-center" aria-label="Main navigation">
+        <a href="#work" class="nav-link">Work</a>
+        <a href="#projects" class="nav-link">Projects</a>
+        <a href="#techstack" class="nav-link">Tech Stack</a>
+        <a href="#education" class="nav-link">Education</a>
+        <a href="#contact" class="nav-link">Contact</a>
+      </nav>
+      <div class="nav-right">
+        <button class="cmd-trigger" id="cmd-trigger-btn" aria-label="Open command palette (Ctrl+K)" aria-haspopup="dialog">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+          <span>Search</span>
+          <kbd>Ctrl+K</kbd>
+        </button>
+        <a href="https://github.com/rudrateja012" target="_blank" rel="noopener noreferrer" class="nav-icon-btn" aria-label="GitHub Profile" id="nav-github-btn">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0 1 12 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z"/></svg>
+        </a>
+        <a href="https://linkedin.com/in/rudra-teja-kouru" target="_blank" rel="noopener noreferrer" class="nav-icon-btn" aria-label="LinkedIn Profile" id="nav-linkedin-btn">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+        </a>
+        <a href="resume/kouru_rudra_teja_resume.pdf" download class="nav-icon-btn" aria-label="Download Resume" id="nav-resume-btn" title="Download Resume">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+        </a>
+        <button class="theme-toggle" id="theme-toggle-btn" aria-label="Toggle theme">
+          <svg class="icon-sun" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+          <svg class="icon-moon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- HERO -->
+    <section class="hero" id="hero" aria-label="Introduction">
+      <div class="container">
+        <div class="hero-inner">
+          <div class="hero-text">
+            <div class="hero-eyebrow">
+              <span class="hero-location">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                Hyderabad, India
+              </span>
+              <span class="hero-sep" aria-hidden="true">·</span>
+              <span class="hero-degree">B.Tech AI &amp; ML</span>
+            </div>
+            <h1 class="hero-headline">
+              Software Engineer &amp; ML Developer building full-stack platforms and predictive systems.
+            </h1>
+            <p class="hero-subheadline">
+              Focused on Python, React, Next.js, and data-driven web applications. I engineer products where clean architecture meets measurable ML impact.
+            </p>
+            <div class="hero-metrics" aria-label="Key metrics">
+              <span class="metric-badge">
+                <span class="metric-mono">8.58</span> CGPA &middot; Malla Reddy University
+              </span>
+              <span class="metric-badge">
+                <span class="metric-mono">Full-Stack</span> + Machine Learning
+              </span>
+              <span class="metric-badge">
+                <span class="metric-mono">AWS</span> Cloud Foundations
+              </span>
+            </div>
+            <div class="hero-actions">
+              <a href="#projects" class="btn btn-primary" id="hero-view-projects">View Projects</a>
+              <button class="btn btn-secondary" id="hero-copy-email" data-email="rudrateja012@gmail.com">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+                Copy Email
+              </button>
+              <a href="https://github.com/rudrateja012" target="_blank" rel="noopener noreferrer" class="btn btn-ghost" id="hero-github">GitHub</a>
+              <a href="https://linkedin.com/in/rudra-teja-kouru" target="_blank" rel="noopener noreferrer" class="btn btn-ghost" id="hero-linkedin">LinkedIn</a>
+            </div>
+          </div>
+          <div class="hero-aside">
+            <div class="hero-card">
+              <div class="hero-card-header">
+                <div class="hero-avatar" aria-hidden="true">KRT</div>
+                <div>
+                  <div class="hero-card-name">Kouru Rudra Teja</div>
+                  <div class="hero-card-role">SE &amp; ML Developer</div>
+                </div>
+              </div>
+              <div class="hero-card-stats">
+                <div class="hero-stat">
+                  <span class="hero-stat-value mono">2+</span>
+                  <span class="hero-stat-label">Projects</span>
+                </div>
+                <div class="hero-stat-div"></div>
+                <div class="hero-stat">
+                  <span class="hero-stat-value mono">3+</span>
+                  <span class="hero-stat-label">Certifications</span>
+                </div>
+                <div class="hero-stat-div"></div>
+                <div class="hero-stat">
+                  <span class="hero-stat-value mono">8.58</span>
+                  <span class="hero-stat-label">CGPA</span>
+                </div>
+              </div>
+              <div class="hero-card-stack">
+                <span class="stack-tag">Python</span>
+                <span class="stack-tag">React</span>
+                <span class="stack-tag">Next.js</span>
+                <span class="stack-tag">Flask</span>
+                <span class="stack-tag">XGBoost</span>
+                <span class="stack-tag">Docker</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- WORK EXPERIENCE -->
+    <section class="section" id="work" aria-label="Work Experience">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-label">Work Experience</span>
+          <h2 class="section-title">Where I've shipped work</h2>
+        </div>
+        <div class="timeline">
+          <div class="timeline-item">
+            <div class="timeline-marker" aria-hidden="true"></div>
+            <div class="timeline-content">
+              <div class="timeline-meta">
+                <span class="timeline-date mono">Aug 2026 – Present</span>
+                <span class="timeline-type">Internship</span>
+              </div>
+              <h3 class="timeline-role">Product &amp; Market Research Analyst</h3>
+              <div class="timeline-company">
+                <span class="company-name">Laventra Technologies LLP</span>
+                <span class="company-sep" aria-hidden="true">&middot;</span>
+                <span class="company-location">Hyderabad, IN</span>
+              </div>
+              <ul class="timeline-bullets">
+                <li>Analyzed market gaps and competitors for SaaS platform <strong>RenderReply</strong>, identifying key differentiation opportunities.</li>
+                <li>Mapped user pain points into technical product feature specifications aligned with engineering sprint backlogs.</li>
+                <li>Delivered data-driven research reports bridging business goals with sprint releases and product milestones.</li>
+              </ul>
+              <div class="timeline-tags">
+                <span class="tag">Market Research</span>
+                <span class="tag">Product Strategy</span>
+                <span class="tag">SaaS</span>
+                <span class="tag">Sprint Planning</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section class="section" id="projects" aria-label="Featured Projects">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-label">Featured Projects</span>
+          <h2 class="section-title">Things I've built</h2>
+        </div>
+        <div class="projects-grid">
+
+          <!-- PROJECT 1: ScholarCamp PRIE -->
+          <article class="project-card" id="project-scholarcampt" data-project="scholarcampt" tabindex="0" role="article" aria-label="ScholarCamp PRIE project">
+            <div class="project-card-header">
+              <div class="project-number mono">01</div>
+              <div class="project-links">
+                <a href="https://github.com/rudrateja012" target="_blank" rel="noopener noreferrer" class="project-link" aria-label="View on GitHub" onclick="event.stopPropagation()">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0 1 12 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z"/></svg>
+                </a>
+              </div>
+            </div>
+            <h3 class="project-title">ScholarCamp PRIE</h3>
+            <p class="project-tagline">Full-Stack Exam Preparation &amp; Performance Readiness Intelligence Engine</p>
+            <ul class="project-bullets">
+              <li>Engineered an end-to-end question practice engine with topic-level score breakdowns.</li>
+              <li>Integrated an <strong>XGBoost</strong> predictive model to forecast exam readiness from historical attempt data.</li>
+              <li>Built role-based access for students and administrators with secure session handling.</li>
+            </ul>
+            <div class="project-stack">
+              <span class="tag">Next.js</span>
+              <span class="tag">React</span>
+              <span class="tag">Python</span>
+              <span class="tag">XGBoost</span>
+              <span class="tag">SQLite</span>
+            </div>
+            <button class="project-expand-btn" data-project="scholarcampt" aria-expanded="false" onclick="event.stopPropagation(); openModal('scholarcampt')">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="15 3 21 3 21 9"/><polyline points="9 21 3 21 3 15"/><line x1="21" y1="3" x2="14" y2="10"/><line x1="3" y1="21" x2="10" y2="14"/></svg>
+              Inspect Details + Model Demo
+            </button>
+          </article>
+
+          <!-- PROJECT 2: Smart GymPro -->
+          <article class="project-card" id="project-gymmgmt" data-project="gymmgmt" tabindex="0" role="article" aria-label="Smart GymPro project">
+            <div class="project-card-header">
+              <div class="project-number mono">02</div>
+              <div class="project-links">
+                <a href="https://github.com/rudrateja012" target="_blank" rel="noopener noreferrer" class="project-link" aria-label="View on GitHub" onclick="event.stopPropagation()">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0 1 12 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z"/></svg>
+                </a>
+              </div>
+            </div>
+            <h3 class="project-title">Smart GymPro</h3>
+            <p class="project-tagline">Containerized Multi-Role Gym Management Platform</p>
+            <ul class="project-bullets">
+              <li>Developed a complete fitness center platform with three role views: <strong>Admin</strong>, <strong>Trainer</strong>, and <strong>Member</strong>.</li>
+              <li>Built RESTful API endpoints for workout scheduling, membership renewals, and goal tracking.</li>
+              <li>Packaged entire client-server workflow using <strong>Docker</strong> for reproducible local and cloud deployment.</li>
+            </ul>
+            <div class="project-stack">
+              <span class="tag">React</span>
+              <span class="tag">Flask</span>
+              <span class="tag">Python</span>
+              <span class="tag">Docker</span>
+              <span class="tag">SQLite</span>
+              <span class="tag">REST APIs</span>
+            </div>
+            <button class="project-expand-btn" data-project="gymmgmt" aria-expanded="false" onclick="event.stopPropagation(); openModal('gymmgmt')">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="15 3 21 3 21 9"/><polyline points="9 21 3 21 3 15"/><line x1="21" y1="3" x2="14" y2="10"/><line x1="3" y1="21" x2="10" y2="14"/></svg>
+              Inspect Architecture + API
+            </button>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- TECH STACK -->
+    <section class="section" id="techstack" aria-label="Technical Skills">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-label">Technical Skills</span>
+          <h2 class="section-title">Technology matrix</h2>
+        </div>
+        <div class="skills-grid">
+          <div class="skill-group">
+            <h3 class="skill-group-title">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+              Languages
+            </h3>
+            <div class="skill-pills">
+              <span class="skill-pill">Python</span>
+              <span class="skill-pill">Java</span>
+              <span class="skill-pill">JavaScript</span>
+              <span class="skill-pill">SQL</span>
+              <span class="skill-pill">HTML5</span>
+              <span class="skill-pill">CSS3</span>
+            </div>
+          </div>
+          <div class="skill-group">
+            <h3 class="skill-group-title">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/></svg>
+              Web &amp; Frameworks
+            </h3>
+            <div class="skill-pills">
+              <span class="skill-pill">React</span>
+              <span class="skill-pill">Next.js</span>
+              <span class="skill-pill">Flask</span>
+              <span class="skill-pill">REST APIs</span>
+            </div>
+          </div>
+          <div class="skill-group">
+            <h3 class="skill-group-title">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/></svg>
+              ML &amp; Data
+            </h3>
+            <div class="skill-pills">
+              <span class="skill-pill">Machine Learning</span>
+              <span class="skill-pill">NumPy</span>
+              <span class="skill-pill">Pandas</span>
+              <span class="skill-pill">XGBoost</span>
+              <span class="skill-pill">Scikit-learn</span>
+            </div>
+          </div>
+          <div class="skill-group">
+            <h3 class="skill-group-title">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>
+              Developer Tools
+            </h3>
+            <div class="skill-pills">
+              <span class="skill-pill">Git</span>
+              <span class="skill-pill">GitHub</span>
+              <span class="skill-pill">Docker</span>
+              <span class="skill-pill">Linux</span>
+              <span class="skill-pill">Postman</span>
+              <span class="skill-pill">SQLite</span>
+              <span class="skill-pill">VS Code</span>
+            </div>
+          </div>
+          <div class="skill-group skill-group-wide">
+            <h3 class="skill-group-title">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+              Core Fundamentals
+            </h3>
+            <div class="skill-pills">
+              <span class="skill-pill">Data Structures &amp; Algorithms</span>
+              <span class="skill-pill">OOP</span>
+              <span class="skill-pill">DBMS</span>
+              <span class="skill-pill">Operating Systems</span>
+              <span class="skill-pill">Computer Networks</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- EDUCATION & CERTIFICATIONS -->
+    <section class="section" id="education" aria-label="Education and Certifications">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-label">Education &amp; Credentials</span>
+          <h2 class="section-title">Academic &amp; certification record</h2>
+        </div>
+        <div class="edu-grid">
+          <div class="edu-block">
+            <h3 class="edu-block-title">Education</h3>
+            <div class="edu-items">
+              <div class="edu-item">
+                <div class="edu-item-badge">B.Tech</div>
+                <div class="edu-item-content">
+                  <div class="edu-item-name">CSE (AI &amp; ML)</div>
+                  <div class="edu-item-school">Malla Reddy University</div>
+                  <div class="edu-item-meta">
+                    <span class="mono">2023 &ndash; 2027</span>
+                    <span class="edu-grade">
+                      <span class="mono">8.58</span> / 10.0 CGPA
+                    </span>
+                  </div>
+                </div>
+              </div>
+              <div class="edu-item">
+                <div class="edu-item-badge">XII</div>
+                <div class="edu-item-content">
+                  <div class="edu-item-name">MPC (Mathematics, Physics, Chemistry)</div>
+                  <div class="edu-item-school">SR Junior College</div>
+                  <div class="edu-item-meta">
+                    <span class="edu-grade"><span class="mono">91.9%</span></span>
+                  </div>
+                </div>
+              </div>
+              <div class="edu-item">
+                <div class="edu-item-badge">X</div>
+                <div class="edu-item-content">
+                  <div class="edu-item-name">Secondary School Certificate</div>
+                  <div class="edu-item-school">Pragati High School</div>
+                  <div class="edu-item-meta">
+                    <span class="edu-grade"><span class="mono">99.66%</span></span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="edu-block">
+            <h3 class="edu-block-title">Certifications</h3>
+            <div class="cert-items">
+              <div class="cert-item">
+                <div class="cert-verified" aria-label="Verified certification" title="Verified">
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                </div>
+                <div class="cert-content">
+                  <div class="cert-name">AWS Academy Graduate &mdash; Cloud Foundations</div>
+                  <div class="cert-meta">
+                    <span class="cert-issuer">AWS Academy</span>
+                    <span class="cert-year mono">2026</span>
+                  </div>
+                </div>
+              </div>
+              <div class="cert-item">
+                <div class="cert-verified" aria-label="Verified certification" title="Verified">
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                </div>
+                <div class="cert-content">
+                  <div class="cert-name">Data Engineering Virtual Internship</div>
+                  <div class="cert-meta">
+                    <span class="cert-issuer">AICTE &amp; EduSkills Foundation</span>
+                    <span class="cert-year mono">2026</span>
+                  </div>
+                  <div class="cert-id mono">ID: 49e8838775ca5e961bae</div>
+                </div>
+              </div>
+              <div class="cert-item">
+                <div class="cert-verified" aria-label="Verified certification" title="Verified">
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                </div>
+                <div class="cert-content">
+                  <div class="cert-name">Python Programming Internship</div>
+                  <div class="cert-meta">
+                    <span class="cert-issuer">YBI Foundation</span>
+                    <span class="cert-year mono">2025</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section class="section contact-section" id="contact" aria-label="Contact">
+      <div class="container">
+        <div class="contact-inner">
+          <div class="contact-text">
+            <span class="section-label">Get in touch</span>
+            <h2 class="contact-title">Let's work together</h2>
+            <p class="contact-desc">Open to Software Engineering and ML roles. Whether it's a full-time position or a project collaboration &mdash; reach out.</p>
+          </div>
+          <div class="contact-dock">
+            <button class="contact-btn-primary" id="contact-copy-email" data-email="rudrateja012@gmail.com">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+              Copy Email
+              <span class="contact-email-text">rudrateja012@gmail.com</span>
+            </button>
+            <div class="contact-links">
+              <a href="https://linkedin.com/in/rudra-teja-kouru" target="_blank" rel="noopener noreferrer" class="contact-link" id="contact-linkedin">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+                LinkedIn
+              </a>
+              <a href="https://github.com/rudrateja012" target="_blank" rel="noopener noreferrer" class="contact-link" id="contact-github">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0 1 12 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z"/></svg>
+                GitHub
+              </a>
+              <a href="tel:+919182564754" class="contact-link" id="contact-phone">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13.6 19.79 19.79 0 0 1 1.61 5 2 2 0 0 1 3.59 2.72h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L7.91 9.4a16 16 0 0 0 6.29 6.29l.87-.87a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                Phone
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-inner">
+        <span class="footer-name">Kouru Rudra Teja</span>
+        <span class="footer-colophon">Engineered with clean semantics. Zero AI sparkle icons.</span>
+        <span class="footer-copy mono">&copy; 2026</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
